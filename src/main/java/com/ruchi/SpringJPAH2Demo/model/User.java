@@ -1,22 +1,32 @@
 package com.ruchi.SpringJPAH2Demo.model;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class User {
-    @javax.persistence.Id
-    @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long Id;
+    @Getter @Setter
     private String firstName;
+    @Getter @Setter
     private String lastName;
 
-    public User() {
-    }
+    /*public User() {
+    }*/
 
-    public User(Long id, String firstName, String lastName) {
-        Id = id;
+    public User( String firstName, String lastName) {
+
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -29,7 +39,7 @@ public class User {
         Id = id;
     }
 
-    public String getFirstName() {
+   /* public String getFirstName() {
         return firstName;
     }
 
@@ -43,14 +53,14 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
+    }*/
 
-    @Override
+    /*@Override
     public String toString() {
         return "User{" +
                 "Id=" + Id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
-    }
+    }*/
 }
