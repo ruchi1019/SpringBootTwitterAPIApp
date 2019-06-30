@@ -1,4 +1,4 @@
-package com.ruchi.SpringJPAH2Demo;
+package com.ruchi.SpringJPATwitter;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
